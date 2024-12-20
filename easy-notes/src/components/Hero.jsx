@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <section
+    <section 
       style={{
         position: 'relative', // Positioning context for absolute elements
         padding: '50px 20px',
