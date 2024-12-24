@@ -1,46 +1,124 @@
 import React from "react";
+import image from "../assets/icon.png";
 
 function Hero() {
   return (
-    <section  
+    <section
       style={{
-        position: 'relative', // Positioning context for absolute elements
-        padding: '50px 20px',
-        textAlign: 'center',
-        color: '#fff',
+        width: "100vw",
+        height: "80vh",
+        backgroundColor: "#7C89CA",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        padding: "0",
+        margin: "0",
+        position: "relative",
       }}
     >
-      {/* Rectangle 1 */}
       <div
         style={{
-          boxSizing: 'border-box',
-          position: 'absolute',
-          width: '670px',
-          height: '517px',
-          left: '387px',
-          top: '170px',
-          background: '#7C89CA',
-          border: '1px solid #D9D9D9',
+          backgroundColor: "rgba(255, 255, 255, 0.1)",
+          border: "1px solid rgba(255, 255, 255, 0.3)",
+          borderRadius: "10px",
+          padding: "30px 20px",
+          width: "50%",
+          height: "50%",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+          textAlign: "center",
+          overflow: "hidden",
+          position: "absolute",
+          top: "50%",
+          transform: "translateY(-50%)",
         }}
-      ></div>
+        className="hover-container"
+      >
+        <span className="line top"></span>
+        <span className="line right"></span>
+        <span className="line bottom"></span>
+        <span className="line left"></span>
 
-      {/* Add Book */}
-      <div
-        style={{
-          position: 'absolute',
-          width: '464px',
-          height: '253px',
-          left: '488px',
-          top: '223px',
-          background: 'url("/path-to-image.png") no-repeat center center',
-          backgroundSize: 'cover',
-        }}
-      ></div>
-
-      {/* Hero Icon */}
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        
+        <img
+          src={image}
+          alt="Icon"
+          style={{
+            width: "50px",
+            paddingTop: "50px",
+            marginBottom: "15px",
+          }}
+        />
+        <p
+          style={{
+            fontSize: "16px",
+            color: "white",
+            lineHeight: "1.5",
+          }}
+        >
+          Remember everything and tackle any project with your notes, tasks, and
+          schedule all in one place.
+        </p>
       </div>
+
+      {/* Add hover effect styles */}
+      <style>
+        {`
+        .hover-container {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hover-container .line {
+          position: absolute;
+          background-color: #007BFF;
+          transition: transform 0.4s ease;
+        }
+
+        .hover-container .line.top,
+        .hover-container .line.bottom {
+          height: 2px;
+          width: 100%;
+          left: 0;
+        }
+
+        .hover-container .line.top {
+          top: 0;
+          transform: scaleX(0);
+        }
+
+        .hover-container .line.bottom {
+          bottom: 0;
+          transform: scaleX(0);
+        }
+
+        .hover-container .line.left,
+        .hover-container .line.right {
+          width: 2px;
+          height: 100%;
+          top: 0;
+        }
+
+        .hover-container .line.left {
+          left: 0;
+          transform: scaleY(0);
+        }
+
+        .hover-container .line.right {
+          right: 0;
+          transform: scaleY(0);
+        }
+
+        .hover-container:hover .line.top,
+        .hover-container:hover .line.bottom {
+          transform: scaleX(1);
+        }
+
+        .hover-container:hover .line.left,
+        .hover-container:hover .line.right {
+          transform: scaleY(1);
+        }
+        `}
+      </style>
     </section>
   );
 }

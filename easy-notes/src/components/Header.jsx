@@ -1,7 +1,6 @@
+function Header() {
+    document.body.style.margin = "0"; // Reset body margin
 
-
-
-      function Header() {
     return (
         <header style={{
             backgroundColor: "#e6e6e6",
@@ -21,7 +20,7 @@
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#help">Help</a></li>
                     <li><a href="#support">Support</a></li>
-                    <li><button style={{marginRight: "0.5rem"}}>Log In</button></li>
+                    <li><button style={{ marginRight: "0.5rem" }}>Log In</button></li>
                     <li><button>Sign Up</button></li>
                 </ul>
             </nav>
@@ -29,7 +28,4 @@
     );
 }
 
-
-
 export default Header;
-
