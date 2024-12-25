@@ -1,5 +1,5 @@
 function Header() {
-    document.body.style.margin = "0"; // Reset body margin
+    document.body.style.margin = "0";
 
     return (
         <header style={{
@@ -9,19 +9,47 @@ function Header() {
             justifyContent: "space-between",
             alignItems: "center"
         }}>
-            <h1>Easy Notes</h1>
+            <h1 style={{
+                fontSize: "1.5rem",
+                color: "green",
+                margin: "0",
+                fontFamily: "'Arial', sans-serif"
+            }}>
+                Easy Notes
+            </h1>
             <nav>
                 <ul style={{
                     display: "flex",
                     listStyleType: "none",
-                    gap: "1rem"
+                    gap: "1rem",
+                    margin: "0",
+                    padding: "0"
                 }}>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#help">Help</a></li>
-                    <li><a href="#support">Support</a></li>
-                    <li><button style={{ marginRight: "0.5rem" }}>Log In</button></li>
-                    <li><button>Sign Up</button></li>
+                    <li><a href="#about" style={{ textDecoration: "none", color: "inherit" }}>About Us</a></li>
+                    <li><a href="#contact" style={{ textDecoration: "none", color: "inherit" }}>Contact</a></li>
+                    <li><a href="#help" style={{ textDecoration: "none", color: "inherit" }}>Help</a></li>
+                    <li><a href="#support" style={{ textDecoration: "none", color: "inherit" }}>Support</a></li>
+                    <li>
+                        <button style={{
+                            backgroundColor: "black",
+                            color: "white",
+                            border: "none",
+                            padding: "0.25rem 0.75rem",
+                            cursor: "pointer",
+                            borderRadius: "4px",
+                            marginRight: "0.15rem"
+                        }}>Log In</button>
+                    </li>
+                    <li>
+                        <button style={{
+                            backgroundColor: "white",
+                            color: "black",
+                            border: "1px solid black",
+                            padding: "0.25rem 0.75rem",
+                            cursor: "pointer",
+                            borderRadius: "4px"
+                        }}>Sign Up</button>
+                    </li>
                 </ul>
             </nav>
         </header>
